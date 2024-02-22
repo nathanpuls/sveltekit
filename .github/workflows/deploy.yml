@@ -11,12 +11,12 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@latest  # Use the latest version
 
       - name: Set Up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@latest  # Use the latest version
         with:
-          node-version: 14
+          node-version: 14  # You can use version 14 as before, or update to a later LTS version if desired
 
       - name: Install Dependencies
         run: npm install
@@ -31,7 +31,7 @@ jobs:
 
     steps:
       - name: Deploy to Firebase Hosting
-        uses: w9jds/firebase-action@v2
+        uses: w9jds/firebase-action@latest  # Use the latest version
         with:
           args: deploy --only hosting
 
