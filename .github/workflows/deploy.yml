@@ -11,10 +11,12 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout  # Automatically uses the latest version
+        uses: actions/checkout@v2  # Use a specific version
 
       - name: Set Up Node.js
         uses: actions/setup-node@v3  # Use a specific version
+        with:
+          node-version: 14
 
       - name: Install Dependencies
         run: npm install
